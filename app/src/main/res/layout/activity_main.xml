@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEdiText"
+        android:hint="Your Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/town"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:rotation="-18"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/aclonica"
+            android:text="Sale - 30№"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:textSize="20sp"
+        android:text="Select Item"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp">
+
+
+    </Spinner>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/guitar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Price"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/priceTextVew"
+            android:layout_below="@id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/currencyTextVew"
+            android:layout_below="@id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:layout_toRightOf="@id/priceTextVew"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/quantityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_toRightOf="@id/priceTitleTextView"
+            android:textColor="@color/black"
+            android:layout_marginStart="110dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_alignParentStart="true"
+            android:onClick="decreaseQuantity"
+            android:id="@+id/minusButton"
+            android:layout_below="@id/quantityTitleTextView"
+            android:textColor="@color/white"
+            android:text="-"
+            android:layout_marginTop="5dp"
+            android:layout_width="50dp"
+            android:layout_marginStart="210dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/quantityTextVew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceTitleTextView"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/minusButton"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_toRightOf="@id/quantityTextVew"
+            android:id="@+id/plusButton"
+            android:layout_below="@id/quantityTitleTextView"
+            android:textColor="@color/white"
+            android:onClick="increaseQuantity"
+            android:text="+"
+            android:layout_marginTop="5dp"
+            android:layout_width="50dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+    <Button
+        android:text="Add to Cart"
+        android:onClick="addToCart"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
